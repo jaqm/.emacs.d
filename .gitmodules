@@ -1,0 +1,6 @@
+[submodule "emacs-jedi"]
+	path = emacs-jedi
+	url = git@github.com:tkf/emacs-jedi.git
+[submodule "emacs-for-python"]
+	path = emacs-for-python
+	url = https://github.com/gabrielelanaro/emacs-for-python.git
