@@ -4,3 +4,12 @@
 [submodule "emacs-for-python"]
 	path = emacs-for-python
 	url = https://github.com/gabrielelanaro/emacs-for-python.git
+[submodule "emacs-epc"]
+	path = emacs-epc
+	url = git@github.com:kiwanami/emacs-epc.git
+[submodule "emacs-deferred"]
+	path = emacs-deferred
+	url = https://github.com/kiwanami/emacs-deferred
+[submodule "emacs-ctable"]
+	path = emacs-ctable
+	url = https://github.com/kiwanami/emacs-ctable
