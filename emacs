@@ -21,11 +21,13 @@
 ;; Disable pairing parenthesis
 (setq skeleton-pair nil)
 
+
 (load-file "~/.emacs.d/emacs-ctable/ctable.el")
 (load-file "~/.emacs.d/emacs-deferred/deferred.el")
 (load-file "~/.emacs.d/emacs-deferred/concurrent.el")
 (load-file "~/.emacs.d/emacs-epc/epc.el")
-;(require 'epc)
+(load-file "~/.emacs.d/emacs-python-environment/python-environment.el")
+					;(require 'epc)
 ;(add-hook 'python-mode-hook 'jedi:setup)
 ;; Autocompletion
 (load-file "/home/jose/.emacs.d/emacs-jedi/jedi-core.el")
