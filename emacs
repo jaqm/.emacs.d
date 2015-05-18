@@ -1,5 +1,7 @@
 ;; (menu-bar-mode 0)
 
+(define-coding-system-alias 'utf8 'utf-8)
+
 (load-file "~/.emacs.d/py-autopep8.el/py-autopep8.el")
 (require 'py-autopep8)
 (add-hook 'python-mode-hook 'py-autopep8-enable-on-save)
