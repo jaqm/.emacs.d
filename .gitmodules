@@ -16,3 +16,6 @@
 [submodule "emacs-python-environment"]
 	path = emacs-python-environment
 	url = git@github.com:tkf/emacs-python-environment.git
+[submodule "py-autopep8.el"]
+	path = py-autopep8.el
+	url = https://github.com/paetzke/py-autopep8.el.git
