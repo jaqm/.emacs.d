@@ -22,3 +22,6 @@
 [submodule "auto-complete"]
 	path = auto-complete
 	url = git@github.com:auto-complete/auto-complete.git
+[submodule "popup-el"]
+	path = popup-el
+	url = git@github.com:auto-complete/popup-el.git
