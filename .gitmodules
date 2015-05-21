@@ -19,3 +19,6 @@
 [submodule "py-autopep8.el"]
 	path = py-autopep8.el
 	url = https://github.com/paetzke/py-autopep8.el.git
+[submodule "auto-complete"]
+	path = auto-complete
+	url = git@github.com:auto-complete/auto-complete.git
