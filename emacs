@@ -2,11 +2,18 @@
 
 (define-coding-system-alias 'utf8 'utf-8)
 
+; Auto-Pep8
 (load-file "~/.emacs.d/py-autopep8.el/py-autopep8.el")
 (require 'py-autopep8)
 (add-hook 'python-mode-hook 'py-autopep8-enable-on-save)
 (setq py-autopep8-options '("--max-line-length=100"))
 
+
+(load-file "/home/jose/.emacs.d/popup-el/popup.el")
+(require 'popup)
+;(load-file "/home/jose/.emacs.d/auto-complete/auto-complete-config.el")
+(load-file "/home/jose/.emacs.d/auto-complete/auto-complete.el")
+(require 'auto-complete)
 
 ;; emacs for python
 ;; Source: https://github.com/gabrielelanaro/emacs-for-python
@@ -32,7 +39,6 @@
 ;; Autocompletion
 (load-file "/home/jose/.emacs.d/emacs-jedi/jedi-core.el")
 (load-file "/home/jose/.emacs.d/emacs-jedi/jedi.el")
-
 
 
 ;; ;; Tell emacs where is your personal elisp lib dir
@@ -90,11 +96,26 @@
 ;; (setq ring-bell-function 'ignore)
 ;; (setq visible-bell t)
 
+
+
+(epy-setup-ipython)
+
+; MELPA
+(require 'package) ;; You might already have this line
+(add-to-list 'package-archives
+	     '("melpa" . "http://melpa.org/packages/") t)
+(when (< emacs-major-version 24)
+  ;; For important compatibility libraries like cl-lib
+  (add-to-list 'package-archives '("gnu" . "http://elpa.gnu.org/packages/")))
+(package-initialize) ;; You might already have this line
+
+
 (message "Happy hacking!! ")
 
 ;; My own keybindings
 
 ;global-set-key (kbd "C-x C-\\") 'next-line)
+
 
 
 
