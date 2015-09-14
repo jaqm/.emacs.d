@@ -40,6 +40,35 @@
 (load-file "/home/jose/.emacs.d/emacs-jedi/jedi-core.el")
 (load-file "/home/jose/.emacs.d/emacs-jedi/jedi.el")
 
+(setq jedi:setup-keys t)                      ; optional(
+(setq jedi:complete-on-dot t)                 ; optional
+
+; TBD: RUN M-x jedi:setup
+; at the beginning of any emacs instance for python.
+;(M-x:jedi:setup)
+
+
+;; Ropemacs configuration
+;; Source: http://wikemacs.org/index.php/Python#Refactoring
+
+(setq emacs-config-path "~/.emacs.d/") 
+(setq base-lisp-path "~/.emacs.d/site-lisp/")
+(setq site-lisp-path (concat emacs-config-path "/site-lisp"))
+(defun add-path (p)
+  (add-to-list 'load-path (concat base-lisp-path p)))
+(add-path "")
+(add-to-list 'load-path "~/.emacs.d")
+
+; Load ropemacs
+(defun load-ropemacs ()
+  "Load pymacs and ropemacs"
+  (interactive)
+  (require 'pymacs)
+  (pymacs-load "ropemacs" "rope-")
+  ;; Automatically save project python buffers before refactorings
+  (setq ropemacs-confirm-saving 'nil)
+)
+(global-set-key "\C-xpl" 'load-ropemacs)
 
 ;; ;; Tell emacs where is your personal elisp lib dir
 ;; (add-to-list 'load-path "~/.emacs.d/lisp/")

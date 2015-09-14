@@ -1,12 +1,12 @@
 [submodule "emacs-jedi"]
 	path = emacs-jedi
-	url = git@github.com:tkf/emacs-jedi.git
+	url = https://github.com/tkf/emacs-jedi.git
 [submodule "emacs-for-python"]
 	path = emacs-for-python
 	url = https://github.com/gabrielelanaro/emacs-for-python.git
 [submodule "emacs-epc"]
 	path = emacs-epc
-	url = git@github.com:kiwanami/emacs-epc.git
+	url = https://github.com/kiwanami/emacs-epc.git
 [submodule "emacs-deferred"]
 	path = emacs-deferred
 	url = https://github.com/kiwanami/emacs-deferred
@@ -15,13 +15,13 @@
 	url = https://github.com/kiwanami/emacs-ctable
 [submodule "emacs-python-environment"]
 	path = emacs-python-environment
-	url = git@github.com:tkf/emacs-python-environment.git
+	url = https://github.com/tkf/emacs-python-environment
 [submodule "py-autopep8.el"]
 	path = py-autopep8.el
 	url = https://github.com/paetzke/py-autopep8.el.git
 [submodule "auto-complete"]
 	path = auto-complete
-	url = git@github.com:auto-complete/auto-complete.git
+	url = https://github.com/auto-complete/auto-complete.git
 [submodule "popup-el"]
 	path = popup-el
-	url = git@github.com:auto-complete/popup-el.git
+	url = https://github.com/auto-complete/popup-el.git
