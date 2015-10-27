@@ -1,17 +1,5 @@
-
-;; Elpy repository
-(require 'package)
-(add-to-list 'package-archives
-             '("elpy" . "https://jorgenschaefer.github.io/packages/"))
-
-;; Elpy initialization
-(package-initialize)
-(elpy-enable)
-
-
-;; (menu-bar-mode 0)
-
-(define-coding-system-alias 'utf8 'utf-8)
+;;
+(require 'json)
 
 ; Auto-Pep8
 (load-file "~/.emacs.d/py-autopep8.el/py-autopep8.el")
@@ -19,6 +7,37 @@
 (add-hook 'python-mode-hook 'py-autopep8-enable-on-save)
 (setq py-autopep8-options '("--max-line-length=100"))
 
+
+;; Elpy repository
+(require 'package)
+;; (add-to-list 'package-archives
+;;              '("elpy" . "https://jorgenschaefer.github.io/packages/"))
+
+;; Elpy initialization
+(package-initialize)
+(elpy-enable)
+
+;(setq highlight-indentation-mode nil)
+(highlight-indentation-mode)
+
+;;(highlight-indentation-mode)
+(setq-default indent-tabs-mode nil)
+
+;; Fixing a key binding bug in elpy
+(define-key yas-minor-mode-map (kbd "C-c k") 'yas-expand)
+;; Fixing another key binding bug in iedit mode
+(define-key global-map (kbd "C-c o") 'iedit-mode)
+
+;; (menu-bar-mode 0)
+
+(define-coding-system-alias 'utf8 'utf-8)
+
+;(highlight-indentation-mode)
+;(set-face-background 'highlight-indentation-face "#e3e3d3")
+; Change the next color to set the indentation colour.
+(set-face-background 'highlight-indentation-face "#zzaaaa")
+; Change the next color to set the current-column-colour.
+(set-face-background 'highlight-indentation-current-column-face "#aaaaaa")
 
 (load-file "/home/jose/.emacs.d/popup-el/popup.el")
 (require 'popup)
