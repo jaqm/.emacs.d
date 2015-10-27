@@ -1,3 +1,14 @@
+
+;; Elpy repository
+(require 'package)
+(add-to-list 'package-archives
+             '("elpy" . "https://jorgenschaefer.github.io/packages/"))
+
+;; Elpy initialization
+(package-initialize)
+(elpy-enable)
+
+
 ;; (menu-bar-mode 0)
 
 (define-coding-system-alias 'utf8 'utf-8)
