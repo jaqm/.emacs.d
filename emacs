@@ -1,19 +1,28 @@
 ;; (menu-bar-mode 0)
 
+(setq-default indent-tabs-mode nil) ; always replace tabs with spaces
+(setq-default tab-width 8) ; set tab width to 4 for all buffers
+
 (define-coding-system-alias 'utf8 'utf-8)
 
-; Auto-Pep8
+;; ; Auto-Pep8
 (load-file "~/.emacs.d/py-autopep8.el/py-autopep8.el")
 (require 'py-autopep8)
 (add-hook 'python-mode-hook 'py-autopep8-enable-on-save)
 (setq py-autopep8-options '("--max-line-length=100"))
 
-
+;; AUTO-COMPLETE
+;; Manual: http://auto-complete.org/doc/manual.html#completion-by-tab
 (load-file "/home/jose/.emacs.d/popup-el/popup.el")
 (require 'popup)
 ;(load-file "/home/jose/.emacs.d/auto-complete/auto-complete-config.el")
 (load-file "/home/jose/.emacs.d/auto-complete/auto-complete.el")
 (require 'auto-complete)
+
+; Default key for autocompletion == TAB
+(ac-set-trigger-key "TAB")
+
+
 
 ;; emacs for python
 ;; Source: https://github.com/gabrielelanaro/emacs-for-python
@@ -77,26 +86,27 @@
 ;;   (global-font-lock-mode t)
 ;;   )
 
-;; ;; enable visual feedback on selections
-;; (setq transient-mark-mode t)
+;; enable visual feedback on selections
+(setq transient-mark-mode t)
 
-;; ;; default to better frame titles
-;; (setq frame-title-format
-;;       (concat "%b - emacs@" system-name))
+;; default to better frame titles
+(setq frame-title-format
+      (concat "%b - emacs@" system-name))
 
 ;; ;; default to unified diffs
-;; (setq diff-switches "-u")
+(setq diff-switches "-u")
 
-;; ;; always end a file with a newline
-;; (setq require-final-newline 'query)
+;;always end a file with a newline
+;; 'query will ask every time you save the file
+;;(setq require-final-newline 'query)
+;; 'query will not ask. It just adds the new line
+(setq require-final-newline 't)
 
-;; (setq c-default-style "k&r")
-;; (setq c-basic-offset 4)
+(setq c-default-style "k&r")
+(setq c-basic-offset 4)
 
 ;; (setq ring-bell-function 'ignore)
-;; (setq visible-bell t)
-
-
+(setq visible-bell t)
 
 (epy-setup-ipython)
 
@@ -117,5 +127,6 @@
 ;global-set-key (kbd "C-x C-\\") 'next-line)
 
 
-
+(setq auto-mode-alist (delete '("git-rebase-todo" . rebase-mode)
+                              auto-mode-alist))
 
